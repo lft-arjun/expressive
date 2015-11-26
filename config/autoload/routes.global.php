@@ -15,6 +15,12 @@ return [
             'allowed_methods' => ['GET'],
         ],
         [
+            'name' => 'about',
+            'path' => '/about',
+            'middleware' => App\Action\AboutPageAction::class,
+            'allowed_methods' => ['GET'],
+        ],
+        [
             'name' => 'api.ping',
             'path' => '/api/ping',
             'middleware' => App\Action\PingAction::class,

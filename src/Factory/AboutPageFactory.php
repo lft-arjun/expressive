@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Action;
+namespace App\Factory;
 
 use Interop\Container\ContainerInterface;
 use Zend\Expressive\Router\RouterInterface;
 use Zend\Expressive\Template\TemplateRendererInterface;
+use App\Action\AboutPageAction;
 
-class HomePageFactory
+class AboutPageFactory
 {
     public function __invoke(ContainerInterface $container)
     {
@@ -15,6 +16,6 @@ class HomePageFactory
             ? $container->get(TemplateRendererInterface::class)
             : null;
 
-        return new HomePageAction($router, $template);
+        return new AboutPageAction($router, $template);
     }
 }
